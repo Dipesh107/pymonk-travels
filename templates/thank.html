@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href={% static 'css/bookBase.css' %}>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <div style="text-align: center; padding: 10px;"><a class="text-warning"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html">Please Read The Guidelines
+      Given By Goverment Before Travelling Anywhere</a></div>
+  <div class="banner"
+    style="width: 100%;height: 100vh; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/static/images/base.jpg');background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;">
+    <div class="navbar">
+      <img src="{% static 'images/logo.png' %}" alt="PyMonk Travels" class="logo">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/trains">Trains</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/review">Review</a></li>
+        <li><a href="/login">Account</a></li>
+      </ul>
+    </div>
+
+    <div class="jumbotron my-5 mx-auto" style="width: 60%;">
+      <h1>Thank You For Booking...</h1>
+      <p class="">Thank you for Booking from PyMonk Travels. Hope you haven't faced any problem. To know Your Details
+        please visit your Account section. </p>
+      <a class="btn btn-lg btn-primary" href="/account" role="button">Proceed To Accounts »</a>
+      <a class="btn btn-lg btn-primary mx-4" href="/" role="button">Proceed To Home »</a>
+      <div class="m-3">
+        <small class="text-info"><a
+            href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html">
+            Please Kindly follow the guidelines given by goverment while
+            travelling</a></small>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

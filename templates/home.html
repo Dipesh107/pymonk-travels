@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home | PyMonk Travels</title>
+
+  <!-- css stylesheets -->
+  <link rel="stylesheet" href={% static 'css/home.css' %}>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- javascripts  -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- <div style="text-align: center; padding: 10px;"><a class="text-warning" -->
+  <!-- href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html">Please Read The Guidelines -->
+  <!-- Given By Goverment Before Travelling Anywhere</a></div> -->
+  <div class="banner">
+    <div class="navbar">
+      <img src="{% static 'images/logo.png' %}" alt="PyMonk Travels" class="logo">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/trains">Trains</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/review">Review</a></li>
+        <li><a href="/login">Account</a></li>
+      </ul>
+    </div>
+
+    <h1>Explore The Globe</h1>
+    <p>The journey of a thousand miles begins with a single step.</p>
+
+    <form action="https://www.google.com/search" method="get">
+      <div class="input-group">
+        <input type="text" class="form-control" name="q" placeholder="Search Country or City">
+        <div class="input-group-append">
+          <input type="submit" class="input-group-text btn" value="search">
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+  <div class="heading m-5 text-center">
+    <div class="upper">
+      <h2>Explore Your Life</h2>
+    </div>
+    <div class="lower">
+      <p>Get to Popular Destinations with your loved ones. Best Offers on Our Tour Packages, Scroll Down to view
+        all.
+      </p>
+    </div>
+  </div>
+
+  <div class="m-5 cursor">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"
+            data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+            alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+            src="{% static 'images/france.jpg' %}" data-holder-rendered="true">
+          <div class="card-body">
+            <h5>FRANCE</h5>
+            <p class="card-text">Tour includes beautiful Eiffel tower and Loire rivers. Exploringthe
+              chateaux of the Loire Valley region. Major landmarks include the cathedral, Saint-Gatien, whose
+              flamboyant
+              Gothic facade is flanked by towers with 12th-century bases and Renaissance tops.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn px-4 btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn px-4 btn-sm btn-primary"><a style="color: #fff;" href="/afterbook">Buy
+                    Now</a></button>
+              </div>
+              <small class="text-muted">9 Days 8 Nights</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"
+            data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+            alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+            src="{% static 'images/italy.jpg' %}" data-holder-rendered="true">
+          <div class="card-body">
+            <h5>ITALY</h5>
+            <p class="card-text">Home of the Italian Riviera, including Portofino, Sanremo, and of Cinque Terre. There
+              are many historic cities in this part of Italy: Turin, the
+              manufacturing capital of Italy, Milan, the most
+              popular tourist destinations of the area. Enjoy the cuisine and the best pizza's having.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn px-4 btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn px-4 btn-sm btn-primary"><a style="color: #fff;" href="/afterbook">Buy
+                    Now</a></button>
+              </div>
+              <small class="text-muted">10 Days 9 Nights</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+          <img class="card-img-top"
+            data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+            alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+            src="{% static 'images/spain.jpg' %}" data-holder-rendered="true">
+          <div class="card-body">
+            <h5>SPAIN</h5>
+            <p class="card-text">It is a land blessed with pristine shorelines, islands, UNESCO World Heritagesites,
+              breathtaking and diverse countryside, scintillating nightlife, mouth-watering cuisine and world-famous
+              festivals. Each boasting of its own set of attractions and a distinct culture.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn px-4 btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn px-4 btn-sm btn-primary"><a style="color: #fff;" href="/afterbook">Buy
+                    Now</a></button>
+              </div>
+              <small class="text-muted">7 Days 6 Nights</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top"
+              data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+              alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+              src="{% static 'images/singapore.jpg' %}" data-holder-rendered="true">
+            <div class="card-body">
+              <h5>SINAPORE</h5>
+              <p class="card-text">Singapore, is a sovereign island city-state in maritime Southeast Asia. Well-known
+                landmarks include the Merlion, Marina Bay Sands, Gardens
+                by the Bay, the Jewel, the Orchard Road
+                shopping belt, the resort island of Sentosa and enjoy the cuisine.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn px-4 btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn px-4 btn-sm btn-primary"><a style="color: #fff;"
+                      href="/afterbook">Buy
+                      Now</a></button>
+                </div>
+                <small class="text-muted">4 Days 3 Nights</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top"
+              data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+              alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+              src="{% static 'images/uae.jpg' %}" data-holder-rendered="true">
+            <div class="card-body">
+              <h5>UAE</h5>
+              <p class="card-text"> Enjoy four nights in the city, with a fantastic stay at the famed property, Howard
+                Johnson by Wyndham Bur Dubai, overlooking the Arabian
+                Sea and amazing skyscraper burj Khalifa. With its
+                lovely location, you can enjoy the best of luxury without having to step out.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn px-4 btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn px-4 btn-sm btn-primary"><a style="color: #fff;"
+                      href="/afterbook">Buy
+                      Now</a></button>
+                </div>
+                <small class="text-muted">5 Days 4 Nights</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 box-shadow">
+            <img class="card-img-top"
+              data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+              alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
+              src="{% static 'images/australia.jpg' %}" data-holder-rendered="true">
+            <div class="card-body">
+              <h5>AUSTRALIA</h5>
+              <p class="card-text">Australia is a land of dreams. From the rainforests, and scorched red deserts, to
+                armchair travelers who describe Australia as their dream destination, the Land Down Under deserves all
+                the hype.Enjoy 11 days with australian history and
+                modern culture with delicious cuisine.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn px-4 btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn px-4 btn-sm btn-primary"><a style="color: #fff;"
+                      href="/afterbook">Buy
+                      Now</a></button>
+                </div>
+                <small class="text-muted">11 Days 9 Nights</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="hr">
+
+  <div class="our-review">
+    <h1>Why Choose Us?</h1>
+    <p class="our-review-p">More than 20 years of Experience, Variety of Tour Packages, and customer satisfaction is our
+      priority</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature">
+            <img class="why-images" src="https://k6u8v6y8.stackpathcdn.com/imgnew/experience.svg"
+              alt="Experience-feedback">
+            <h4>Best In Class</h4>
+            <p>Our dedicated travel team diligently works round-the-clock to design the best travel experiences for the
+              customers. The skilled team spends considerable amounts of time ideating tour packages that guarantee to
+              make travelling with u an experience like no other.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <img class="why-images" src="https://k6u8v6y8.stackpathcdn.com/imgnew/positive-customer-feedback.svg"
+              alt="customer-feedback-tour">
+            <h4>Customer Satisfaction</h4>
+            <p>We're truly humbled to have received volumes of positive customer feedback for our services.
+              This appreciation from our prestigious clients is more valuable than any award for us. As a
+              customer-driven travel company, our priority has always been their satisfaction.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature">
+            <img class="why-images" src="https://k6u8v6y8.stackpathcdn.com/imgnew/recognition-tour-01.svg"
+              alt="recognition-tour-01">
+            <h4>Recognition</h4>
+            <p>We are proud to be accredited by major tour and travel associations in India MOT. It is an honour for us
+              to be able to be a part of crucial initiatives towards safeguarding
+              animal rights, and responsible mountaineering and trekking ventures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{% static 'images/logo1.png' %}" class="footer-logo" alt="footer-logo">
+          <p>In view of the spread of Covid-19, we have announced new guidelines for passengers traveling . It must be
+            noted that the passengers should aboard the tourism by following our company policies and guidelines </p>
+        </div>
+        <div class="col-md-3">
+          <h4>Features</h4>
+          <p>Deals & Offers</p>
+          <p>Best Packages</p>
+          <p>Cancelation Policy</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Contacts</h4>
+          <p><i class="fa fa-phone-square"></i>+1 0124345443</p>
+          <p><i class="fa fa-envelope-square"></i>pymonktravels@gmail.com</p>
+          <p><i class="fa fa-home"></i>abc road, Mumbai</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Social media</h4>
+          <p><i class="fa fa-facebook-f"></i>FaceBook</p>
+          <p><i class="fa fa-instagram"></i>Instagram</p>
+          <p><i class="fa fa-twitter"></i>Twitter</p>
+        </div>
+      </div>
+      <hr>
+      <p class="cpy text-center">© 2021 PyMonk Travels.</p>
+    </div>
+  </section>
+
+  </script>
+
+</body>
+
+</html>

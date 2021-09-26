@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.banner {
+  width: 100%;
+  height: 83vh;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/static/images/homebg.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center; /*including these */
+  color: #fff; /*including these */
+}
+
+/* changes from here */
+
+.banner h1 {
+  padding-top: 30px;
+  padding-bottom: 0;
+  font-size: 55px;
+}
+
+.banner p {
+  margin: 18px 0;
+}
+
+.input-group {
+  width: 90%;
+  max-width: 500px;
+  border-radius: 30px;
+  background: #fff;
+  margin: auto;
+  padding: 2px;
+}
+
+.form-control {
+  border: 0 !important;
+  border-radius: 30px !important;
+  margin: 2px;
+  box-shadow: none !important;
+}
+
+.input-group-text {
+  width: 100px;
+  background-image: linear-gradient(#00ff7e, #1f3d90);
+  border: 0 !important;
+  color: #fff !important;
+  padding: 0 25px !important;
+  border-radius: 30px !important;
+  box-shadow: none;
+}
+
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 250px;
+  height: 160px;
+  cursor: pointer;
+  filter: invert(100%);
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background:#009688 ;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+.upper {
+  color: #31326f;
+}
+
+.lower {
+  color: #2a2caf;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* why content css */
+
+.our-review {
+  padding: 70px 0;
+}
+
+.our-review h1 {
+  text-align: center;
+}
+
+.our-review-p {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.feature {
+  padding-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 100, 0.2);
+}
+
+.our-review img {
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+
+.feature p {
+  padding: 30px 10px 10px 10px;
+}
+
+/* contact form css */
+
+.bottom-heading {
+  color: #53a3d9;
+}
+
+.footer-imgs {
+  width: 70px;
+}
+
+.bottom-container {
+  background-color: #364f6b;
+  margin-top: 32px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+.bottom-container a {
+  color: #72a0d3;
+  text-decoration: none;
+}
+
+.bottom-container a:hover {
+  color: #eaf6f6;
+  text-decoration: underline;
+}
+
+.cpy{
+  margin: auto;
+  color: #eaf6f6;
+  font-size: 0.70rem;
+}
+
+.footer {
+  padding: 100px 20px;
+  background-image: linear-gradient(#2d557d, #9610fb);
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  filter: invert(100%);
+}
+
+.footer h4 {
+  text-align: left;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.footer p {
+  font-size: 12px;
+  text-align: justify;
+  padding-right: 35px;
+}
+
+.footer .row .fa {
+  padding-right: 20px;
+  font-size: 15px;
+}
+
+.footer hr {
+  margin-top: 15px;
+  background: #efefef;
+}

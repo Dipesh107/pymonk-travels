@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Account | PyMonk Travels</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    .banner {
+      width: 100%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/static/images/seaface.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding-bottom: 2%;
+    }
+
+    .navbar {
+      width: 90%;
+      margin: auto;
+      padding: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 26px;
+      color: #fff;
+      text-transform: uppercase;
+      font-family: "sans-serif";
+    }
+
+    .navbar ul li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .navbar ul li::after {
+      content: '';
+      height: 3px;
+      width: 0;
+      background: #009688;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.5s;
+    }
+
+    .navbar ul li:hover::after {
+      width: 100%;
+    }
+
+    .acc {
+      color: #fff;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div style="text-align: center; padding: 10px;"><a class="text-warning"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html">Please Read The Guidelines
+      Given By Goverment Before Travelling Anywhere</a></div>
+  <div class="banner">
+    <div class="navbar">
+      <span class="logo">Hello, {{request.user}}</span>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/trains">Trains</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/review">Review</a></li>
+        <li><a href="/">logout</a></li>
+      </ul>
+    </div>
+
+    <h2 style="color: #fff; text-align: center;">Your Recent Flights</h2>
+    <div class="card" id="flights-card" style="width: 60%; margin: 4% auto;">
+      <h5 class="card-header"><strong style=" text-transform: uppercase;">{{city}}</strong> TO <strong
+          style=" text-transform: uppercase; ">{{dest}}</strong>
+        <span style="float: right;">Scheduled On : <strong>{{date}}</strong></span>
+      </h5>
+      <div class="card-body">
+        <div>
+          <p><strong id="one" ondblclick="random()">Show my Seat Number</strong></p>
+          <!-- <p style="float:right">Return Date : </p>   -->
+        </div>
+        <div>
+          <small><a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html"
+              class="my-2 text-danger" style="list-style: none; text-decoration: none;">Please Kindly follow
+              the guidelines given by goverment while travelling</a></small>
+          <input style="float: right;" class="btn btn-danger mx-2" type="button" onclick="cancel()" id="cancel"
+            value="Cancel">
+          <button onclick="resch()" class="btn btn-primary mx-2" style="float: right;"><a style="color: #fff;"
+              href="/flights">Reschedule</a></button>
+          <!-- <input style="float: right;" class="btn btn-primary mx-2" type="button" value="Reschedule"> -->
+        </div>
+      </div>
+    </div>
+
+    <h2 style="color: #fff; text-align: center;">Your Recent Trains</h2>
+    <div class="card" id="train-card" style="width: 60%; margin: 4% auto;">
+      <h5 class="card-header"><strong style=" text-transform: uppercase; ">{{traincity}}</strong> TO <strong
+          style=" text-transform: uppercase; ">{{traindest}}</strong>
+        <span style="float: right;" id="re-date">Scheduled On : <strong>{{traindate}}</strong></span>
+      </h5>
+      <div class="card-body">
+        <div>
+          <p><strong id="two" ondblclick="random2()">Show my Seat Number</strong></p>
+        </div>
+        <div>
+          <small><a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html"
+              class="my-2 text-danger" style="list-style: none; text-decoration: none;">Please Kindly follow
+              the guidelines given by goverment while travelling</a></small>
+          <input style="float: right;" class="btn btn-danger mx-2" type="button" onclick="cancel1()" value="Cancel">
+          <button onclick="resch()" class="btn btn-primary mx-2" style="float: right;"><a style="color: #fff;"
+              href="/trains">Reschedule</a></button>
+          <!-- <input style="float: right;" class="btn btn-primary mx-2" type="button" value="Reschedule"> -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function random() {
+        document.getElementById("one").innerHTML = "Your Seat Number: " + "flg" + "{{city}}" + "{{dest}}" + Math.floor(Math.random() * 10000);
+      }
+      function random2() {
+        document.getElementById("two").innerHTML = "Your Seat Number: " + "trn" + "{{traincity}}" + "{{traindest}}" + Math.floor(Math.random() * 10000)
+      }
+      function cancel() {
+        var text = "Your Booked Flight Will be canceled. Press Ok to continue!"
+        alert(text)
+        document.getElementById("flights-card").innerHTML = "Your Flight Has Been Canceled !"
+      }
+      function cancel1() {
+        var text1 = "Your Booked Train Will be canceled. Press Ok to continue!"
+        alert(text1)
+        document.getElementById("train-card").innerHTML = "Your Train Has Been Canceled !"
+      }
+      function resch() {
+        var retext = "Do you Really wanna Reschedule ? Press ok continue."
+        alert(retext)
+      }
+    </script>
+  </div>
+</body>
+
+</html>

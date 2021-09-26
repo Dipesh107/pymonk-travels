@@ -1,0 +1,26 @@
+{% extends "bookBase.html" %}
+
+{% block title %} Book Trains | PyMonk Travels {% endblock %}
+
+
+{% block content %}
+
+{% for result in data %}
+
+<div class="card" style="width: 60%; margin: 4% auto;">
+  <h5 class="card-header"><strong> {{result.city_from}}</strong> TO <strong>{{result.destination}}</strong>
+    <span style="float: right;">RS.{{result.pricing}}</span>
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title">{{result.trains_type}}</h5>
+    <p class="card-text">Number of Seats available: {{result.number_of_seats}}</p>
+    <a href="/afterbook" class="btn btn-primary">Book Now</a><br>
+    <small><a href="" class="my-2 text-danger" style="list-style: none; text-decoration: none;">Please Kindly follow
+        the guidelines
+        followed by goverment while travelling</a></small>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}

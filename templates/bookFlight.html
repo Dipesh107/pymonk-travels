@@ -1,0 +1,32 @@
+{% extends "bookBase.html" %}
+
+{% block title %} Book Flights | PyMonk Travels {% endblock %}
+
+
+{% block content %}
+<!-- <form action="" method="POST"> -->
+<!-- <input type="search" name="search" id=""> -->
+<!-- <button type="submit">Search</button> -->
+<!--  -->
+<!-- </form> -->
+
+{% for result in data %}
+
+<form action="" method="post">
+  <div class="card" style="width: 60%; margin: 4% auto;">
+    <h5 class="card-header"><strong>{{result.city_from}}</strong> TO <strong>{{result.destination}}</strong>
+      <span style="float: right;">RS.{{result.pricing}}</span>
+    </h5>
+    <div class="card-body">
+      <h5 class="card-title">{{result.company_name}}</h5>
+      <p class="card-text">Number of Seats available: {{result.no_of_seats}}</p>
+      <a href="/afterbook" class="btn btn-primary">Book Now</a><br>
+      <small><a href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html"
+          class="my-2 text-danger" style="list-style: none; text-decoration: none;">Please Kindly follow
+          the guidelines given by goverment while travelling</a></small>
+    </div>
+  </div>
+</form>
+{% endfor %}
+
+{% endblock %}

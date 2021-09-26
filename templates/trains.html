@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trains | PyMonk Travels</title>
+  <!-- //custom-theme -->
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <!-- stylesheet -->
+  <link href="//fonts.googleapis.com/css?family=Asap:400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href={% static 'css/trains.css' %} media="all">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <div style="text-align: center; padding: 10px;"><a class="text-warning"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html">Please Read The Guidelines
+      Given By Goverment Before Travelling Anywhere</a></div>
+  <div class="banner">
+    <div class="navbar">
+      <img src="{% static 'images/logo.png' %}" alt="PyMonk Travels" class="logo">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/trains">Trains</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/review">Review</a></li>
+        <li><a href="/login">Account</a></li>
+      </ul>
+    </div>
+
+    <div class="container" style="margin-top: -1%;">
+      <form action="" method="GET" class="one-way">
+        <!-- <div class="radio-btns"> -->
+        <!-- <ul class="form-ul"> -->
+        <!-- <li> -->
+        <!-- <input type="radio" name="view" class="radio-inputs" id="good" checked="checked"> -->
+        <!-- <label for="good">Return</label> -->
+        <!-- </li> -->
+        <!-- <li> -->
+        <!-- <input type="radio" name="view" class="radio-inputs" id="excellent"> -->
+        <!-- <label for="excellent">One Way</label> -->
+        <!-- </li> -->
+        <!-- </ul> -->
+        <!-- </div> -->
+
+        <div>
+          <div>
+            <input type="text" class="select-items secs-left" name="city_from" id="city_from" placeholder="from">
+            <!-- <select class="select-items secs-left"> -->
+            <!-- <option value="1">From</option> -->
+            <!-- <option value="2">Chattrapati Shivaji Maharaj Terminal, Mumbai</option> -->
+            <!-- <option value="3">Allahabad Junction</option> -->
+            <!-- <option value="4">Patna junction</option> -->
+            <!-- <option value="5">Chennai Central Railway Station</option> -->
+            <!-- <option value="6">Sealdah Railway Station</option> -->
+            <!-- <option value="7">New Delhi Railway Station</option> -->
+            <!-- <option value="8">Kanpur Central Station</option> -->
+            <!-- <option value="9">Kalyan Junction</option> -->
+            <!-- <option value="10">Howrah Junction, Kolkata</option> -->
+            <!-- <option value="11">Bangalore City Railway Station</option> -->
+            <!-- <option value="12">Varanasi Junction</option> -->
+            <!-- <option value="13">Lucknow Charbagh Railway Station</option> -->
+            <!-- <option value="14">Mughalsarai Junction</option> -->
+            <!-- <option value="15">Vijayawada Junction</option> -->
+            <!-- <option value="16">Ahmedabad Junction</option> -->
+            <!-- <option value="17">Pune Central Junction</option> -->
+            <!-- <option value="18">Bhusaval Junction</option> -->
+            <!-- <option value="19">Aligarh Junction</option> -->
+            <!-- <option value="20"> Vijayawada Railway Station, Andhra Pradesh</option> -->
+            <!-- </select> -->
+            <input type="text" class="select-items secs-right" name="destination" id="destination"
+              placeholder="Destination">
+            <!-- <select class="select-items secs-right"> -->
+            <!-- <option value="1">Destination</option> -->
+            <!-- <option value="2">Chattrapati Shivaji Maharaj Terminal, Mumbai</option> -->
+            <!-- <option value="3">Allahabad Junction</option> -->
+            <!-- <option value="4">Patna junction</option> -->
+            <!-- <option value="5">Chennai Central Railway Station</option> -->
+            <!-- <option value="6">Sealdah Railway Station</option> -->
+            <!-- <option value="7">New Delhi Railway Station</option> -->
+            <!-- <option value="8">Kanpur Central Station</option> -->
+            <!-- <option value="9">Kalyan Junction</option> -->
+            <!-- <option value="10">Howrah Junction, Kolkata</option> -->
+            <!-- <option value="11">Bangalore City Railway Station</option> -->
+            <!-- <option value="12">Varanasi Junction</option> -->
+            <!-- <option value="13">Lucknow Charbagh Railway Station</option> -->
+            <!-- <option value="14">Mughalsarai Junction</option> -->
+            <!-- <option value="15">Vijayawada Junction</option> -->
+            <!-- <option value="16">Ahmedabad Junction</option> -->
+            <!-- <option value="17">Pune Central Junction</option> -->
+            <!-- <option value="18">Bhusaval Junction</option> -->
+            <!-- <option value="19">Aligarh Junction</option> -->
+            <!-- <option value="20"> Vijayawada Railway Station, Andhra Pradesh</option> -->
+            <!-- </select> -->
+          </div>
+          <input name="journeyDate" placeholder="Journey Date" class="input-grps" type="text" id="date"
+            onfocus="(this.type='date')">
+          <input name="returnDate" placeholder="Return Date" class="input-grps" type="text" id="date"
+            onfocus="(this.type='date')">
+          <div>
+            <select class="select-items secs-left">
+              <option value="1">1 Passenger</option>
+              <option value="2">2 Passengers</option>
+              <option value="3">3 Passengers</option>
+              <option value="4">4 Passengers</option>
+            </select>
+            <select class="select-items secs-right">
+              <option value="1">Economy Class</option>
+              <option value="2">Business Class</option>
+            </select>
+          </div>
+          <div class="submit">
+            <button type="submit" class="submit-btn" value="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <p>© 2021 PyMonk Travels. All rights reserved</p>
+
+  </div>
+
+</body>
+
+</html>

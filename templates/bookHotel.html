@@ -1,0 +1,33 @@
+{% extends "bookBase.html" %}
+
+{% block title %} Book Hotels | PyMonk Travels {% endblock %}
+
+
+{% block content %}
+
+{% for result in data %}
+
+
+<div class="card" style="width: 60%; margin: 4% auto;">
+  <h5 class="card-header"><strong> {{result.hotel_name}}</strong>
+    <span style="margin-left: 2%;">{{result.location}}</span>
+    <span style="float: right;">RS.{{result.avg_prices}}</span>
+  </h5>
+  <div class="card-body">
+    <h5 class="card-title">Key Features of Hotel</h5>
+    <p class="card-text">{{result.facilities}}</p>
+    <a href="/afterbook" class="btn btn-primary">Book Now</a><br>
+    <small><a href="" class="my-2 text-danger" style="list-style: none; text-decoration: none;">Please Kindly follow
+        the guidelines
+        followed by goverment while travelling</a></small>
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
+
+<!-- <td>{{result.hotel_name}}</td> -->
+<!-- <td>{{result.location}}</td> -->
+<!-- <td>{{result.avg_prices}}</td> -->
+<!-- <td>{{result.facilities}}</td> -->

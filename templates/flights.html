@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flights | PyMonk Travels</title>
+  <!-- //custom-theme -->
+  <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+  <!-- stylesheet -->
+  <link href="//fonts.googleapis.com/css?family=Asap:400,400i,500,500i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/flights.css' %}" media="all">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.
+css">
+</head>
+
+<body>
+  <div style="text-align: center; padding: 10px;"><a class="text-warning"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html">Please Read The Guidelines
+      Given By Goverment Before Travelling Anywhere</a></div>
+  <div class="banner">
+    <div class="navbar">
+      <img src="{% static 'images/logo.png' %}" alt="PyMonk Travels" class="logo">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/trains">Trains</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/review">Review</a></li>
+        <li><a href="/account">Account</a></li>
+      </ul>
+    </div>
+
+    <div class="container-upper" style="margin-top: -1%;">
+      <form method="GET" action="" class="one-way">
+        <!-- <div class="radio-btns"> -->
+        <!-- <ul class="form-ul"> -->
+        <!-- <li><input type="radio" name="view" class="radio-inputs" id="good" checked="checked"> -->
+        <!-- <label for="good">Return</label> -->
+        <!-- </li> -->
+        <!-- <li><input type="radio" name="view-one-way -->
+        <!-- " class="radio-inputs" id="excellent"> -->
+        <!-- <label for="excellent">One Way</label> -->
+        <!-- </li> -->
+        <!-- </ul> -->
+        <!-- </div> -->
+
+        <div>
+          <div>
+            <form action="" method="POST">
+              <input type="text" class="select-items secs-left" required name="city_from" id="city_from" placeholder="from">
+              <!-- <select class="select-items secs-left"> -->
+              <!-- <option value="1">From</option> -->
+              <!-- <option value="2">Mumbai</option> -->
+              <!-- <option value="3">Delhi</option> -->
+              <!-- <option value="4">Pune</option> -->
+              <!-- <option value="5">Hydrabad</option> -->
+              <!-- <option value="6">Bhuvaneshwar</option> -->
+              <!-- <option value="7">Nagpur</option> -->
+              <!-- <option value="8">Chandigarh</option> -->
+              <!-- <option value="9">Jaipur</option> -->
+              <!-- <option value="10">Kolkata</option> -->
+              <!-- <option value="11">Manali</option> -->
+              <!-- <option value="12">Shimla</option> -->
+              <!-- <option value="13">Chennai</option> -->
+              <!-- <option value="14">Banglore</option> -->
+              <!-- <option value="15">Singapore</option> -->
+              <!-- <option value="16">UAE</option> -->
+              <!-- <option value="17">Paris</option> -->
+              <!-- <option value="18">Sydney</option> -->
+              <!-- <option value="19">London</option> -->
+              <!-- <option value="20">New York</option> -->
+              <!-- <option value="22">Los Angeles</option> -->
+              <!-- </select> -->
+              <input type="text" class="select-items secs-right" name="destination" id="destination"
+                placeholder="Destination">
+          </div>
+      </form>
+      <input placeholder="Journey Date" name="jdate" class="input-grps" type="text" id="date"
+        onfocus="(this.type='date')">
+      <input placeholder="Return Date" class="input-grps" type="text" id="date" onfocus="(this.type='date')">
+      <div>
+        <select class="select-items secs-left">
+          <option value="1">1 Passenger</option>
+          <option value="2">2 Passengers</option>
+          <option value="3">3 Passengers</option>
+          <option value="4">4 Passengers</option>
+        </select>
+        <select class="select-items secs-right">
+          <option value="1">Economy Class</option>
+          <option value="2">Business Class</option>
+        </select>
+      </div>
+      <div class="submit">
+        <button type="submit" class="submit-btn" value="submit">Search Flights</button>
+      </div>
+    </div>
+    </form>
+  </div>
+  <p>© 2021 PyMonk Travels. All rights reserved</p>
+
+  </div>
+
+  <div class="container2">
+    <h2 style="text-align: center;">Top Flights</h2>
+    <p>Get the most recent flights now with Best Deals and Offers</p>
+    <div class="flight-box">
+      <div class="row">
+        <div class="col-md-6">
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Delhi to Mumbai (DEL-BOM)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Mumbai to Delhi (BOM-DEL)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Delhi to Hydrabad (DEL-GOI)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Delhi to Bangalore (DEL-BLR)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Mumbai to Jaipur (BOM-GOI)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Delhi to Hydrabad (DEL-PAT)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Delhi to Pune (DEL-PNQ)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Delhi to Chennai (DEL-PNQ)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Kolkata to Delhi (CCU-DEL)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a class="hm-link" href="#">Mumbai to Bangalore (BOM-BLR)</a>
+              <a href="/bookflight" class="search-btn">Search Flights</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <section class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <img src="{% static 'images/logo1.png' %}" class="footer-logo" alt="footer-logo">
+          <p>In view of the spread of Covid-19, we have announced new guidelines for passengers traveling . It
+            must be
+            noted that the passengers should aboard the tourism by following our company policies and
+            guidelines </p>
+        </div>
+        <div class="col-md-3">
+          <h4>Features</h4>
+          <p>Deals & Offers</p>
+          <p>Best Packages</p>
+          <p>Cancelation Policy</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Contacts</h4>
+          <p><i class="fa fa-phone-square"></i>+1 0124345443</p>
+          <p><i class="fa fa-envelope-square"></i>pymonktravel@gmail.com</p>
+          <p><i class="fa fa-home"></i>abc road, Mumbai</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Social media</h4>
+          <p><i class="fa fa-facebook-f"></i>FaceBook</p>
+          <p><i class="fa fa-instagram"></i>Instagram</p>
+          <p><i class="fa fa-twitter"></i>Twitter</p>
+        </div>
+      </div>
+      <hr>
+      <p class="cpy text-center">© 2021 PyMonk Travels Patil.</p>
+    </div>
+  </section>
+
+</body>
+
+</html>

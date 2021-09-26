@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You For Emails</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .foot {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="text-align: center; padding: 10px;"><a class="text-warning"
+      href="https://www.cdc.gov/coronavirus/2019-ncov/travelers/travel-during-covid19.html">Please Read The Guidelines
+      Given By Goverment Before Travelling Anywhere</a></div>
+
+  <center>
+    <h2 style="color: brown;">{{result}}</h2>
+  </center>
+  <h4>Your Number: {{number}}</h4>
+  <h4>Your Email: {{email}}</h4>
+
+  <img src="{% static 'images/logo1.png' %}" alt="" style="width: auto; margin: 2%;">
+
+  <h3>Your Review is as follows as</h3>
+  <p style="margin: 2%; width: 70%;">{{message}}</p>
+
+  <h3>Follow Us on</h3>
+  <p class="foot"><i class="fa fa-facebook-f"></i><a href="#">FaceBook</a></p>
+  <p class="foot"><i class="fa fa-instagram"></i><a href="#">Instagram</a></p>
+  <p class="foot"><i class="fa fa-twitter"></i><a href="#">Twitter</a></p>
+  <p class="foot"><i class="fa fa-envelope-square"></i>pymonktravels@gmail.com</p>
+</body>
+
+</html>

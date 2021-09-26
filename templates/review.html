@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review | PyMonk Travels</title>
+  <link rel="stylesheet" href={% static 'css/review.css' %}>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+      <img src="{% static 'images/logo.png' %}" alt="PyMonk Travels" class="logo">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/flights">Flights</a></li>
+        <li><a href="/trains">Trains</a></li>
+        <li><a href="/hotels">Hotels</a></li>
+        <li><a href="/review">Review</a></li>
+        <li><a href="/account">Account</a></li>
+      </ul>
+    </div>
+
+    <div class="container-upper">
+      <h1>Connect With Us</h1>
+      <p>We Appreciate Your Feedback. Feel Free to get in touch with us, we will surely consider your queries</p>
+      <div class="contact-box">
+        <div class="contact-left">
+          <h3>Give Your Feedback</h3>
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="feedback-input-row">
+              <div class="feedback-input-group">
+                <label for="name">Name</label>
+                <input type="text" name="sender_name" placeholder="Enter Your Name" required>
+              </div>
+
+              <div class="feedback-input-group">
+                <label for="name">Phone</label>
+                <input type="text" name="sender_number" placeholder="Enter Your Number" required>
+              </div>
+            </div>
+
+            <div class="feedback-input-row">
+              <div class="feedback-input-group">
+                <label for="name">Email</label>
+                <input type="email" name="sender_email" placeholder="Enter Your Email" required>
+              </div>
+              <div class="feedback-input-group">
+                <label for="name">Subject</label>
+                <input type="text" name="subject" placeholder="Subject">
+              </div>
+            </div>
+
+            <label for="message">Message</label>
+
+            <textarea name="message" placeholder="Enter Your Message" id="" cols="30" rows="5"></textarea>
+
+            <button class="send-btn" type="submit">Send</button>
+          </form>
+        </div>
+        <div class="contact-right">
+          <h3>Contact Us</h3>
+
+          <table>
+            <tr>
+              <td>Email</td>
+              <td>pymonktravels@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Phone</td>
+              <td>+91 102 345 6789</td>
+            </tr>
+            <tr>
+              <td>Address</td>
+              <td>#212, Ground Floor, 7th cross <br>
+                Mash Building, Epic Road, Nerul <br>
+                New Mumbai, 410120</td>
+            </tr>
+          </table>
+
+          <div class="socials">
+            <i class="fa fa-2x fa-facebook-f"></i>
+            <i class="fa fa-2x fa-instagram"></i>
+            <i class="fa fa-2x fa-twitter"></i>
+            <i class="fa fa-2x fa-envelope-square"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="feeds">
+    <h1 class="h1">Featured Feedbacks</h1>
+    <div class="feedbacks">
+      <div class="feedgiven" style="margin-left: 13%;">
+        <div class="img-class">
+          <img class="img" src="{% static 'images/account.png' %}" alt="">
+        </div>
+        <p>The travelling experience was so great. I never faced any difficulty while travelling and it was very
+          exciting throughout the journey. The Agency respected me and considered my every request and whatever wis
+          did.</p>
+        <h3 class="feed-h3">Elsea Martin<small>, Customer</small></h3>
+
+      </div>
+      <div class="feedgiven">
+        <div class="img-class">
+          <img class="img" src="{% static 'images/account.png' %}" alt="">
+        </div>
+        <p>The travelling experience was so great. I never faced any difficulty while travelling and it was very
+          exciting throughout the journey. The Agency respected me and considered my every request and whatever wi
+          did.</p>
+        <h3 class="feed-h3">Simon Paul<small>, Customer</small></h3>
+      </div>
+
+      <div class="feedgiven">
+        <div class="img-class">
+          <img class="img" src="{% static 'images/account.png' %}" alt="">
+        </div>
+        <p>The travelling experience was so great. I never faced any difficulty while travelling and it was very
+          exciting throughout the journey. The Agency respected me and considered my every request and whatever w
+          did.</p>
+        <h3 class="feed-h3">Gary Goedul<small>, Customer</small></h3>
+      </div>
+    </div>
+  </section>
+
+  <img src="{% static 'images/footerimg.png' %}" alt="" style="width: 100%; margin-bottom: -1%; padding-bottom: -1%;">
+
+</body>
+
+</html>
